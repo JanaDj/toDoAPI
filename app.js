@@ -3,6 +3,24 @@ const app = express();
 const port = 3000;
 const routes = require('./routes');
 
+// db realted 
+const db = require('./db');
+const {Todo} = db.models;
+
+(async () => {
+    await db.sequelize.sync();
+    // try{
+    
+    // } catch (error){
+    //     if(error.name === 'SequelizeValidationError') {
+    //         const error = error.errors.map(err => err.message);
+    //         console.error('Validation errors: ', errors);
+    //     } else {
+    //         throw error;
+    //     }
+    // }
+}) ();
+
 app.use(express.json());
 app.use('/api', routes);
 

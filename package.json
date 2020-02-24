@@ -1,15 +1,26 @@
 {
   "name": "ToDoAPI",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
-  }
+    "express": "^4.17.1",
+    "sequelize": "^5.21.5",
+    "sqlite": "^3.0.3"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JanaDj/toDoAPI.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JanaDj/toDoAPI/issues"
+  },
+  "homepage": "https://github.com/JanaDj/toDoAPI#readme",
+  "description": ""
 }

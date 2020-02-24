@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const dataManager = require('./dataManager');
 
-
 /**
  * Method to wrap the try catch code to reduce repetative code
  * @param {function} cb 
@@ -38,8 +37,8 @@ router.post('/todo', asyncHandler(async (req, res) =>{
     if(req.body.title){
         const toDo = await dataManager.createToDo({
             title: req.body.title,
-            isComplete: false,
-        });
+            isComplete: req.body.isComplete
+        })
         res.status(201).json(toDo);
     } else {
         res.status(400).json({message: "Please fill in all the required fields. Title and isComplete are required."});
